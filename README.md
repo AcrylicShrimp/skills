@@ -9,7 +9,7 @@ All imported skills must be in English. Non-English skills are translated during
 Keep the actual skill files in this repository and create a symbolic link for each skill directory inside the local Codex skills directory:
 
 ```text
-~/Devel/skills/                    # Git working copy: actual files
+<repository>/                     # Git working copy: actual files
 ├── README.md
 ├── AGENTS.md
 ├── baby-mode/
@@ -17,15 +17,15 @@ Keep the actual skill files in this repository and create a symbolic link for ea
 └── create-todo/
     └── SKILL.md
 
-~/.codex/skills/                   # Local Codex skills directory
+<Codex skills directory>/         # Location used by your installation
 ├── .system/                       # Bundled skills, kept locally
-├── baby-mode -> ~/Devel/skills/baby-mode
-└── create-todo -> ~/Devel/skills/create-todo
+├── baby-mode -> <repository>/baby-mode
+└── create-todo -> <repository>/create-todo
 ```
 
 This is the intended layout; the skill names are examples. Editing a file through either path changes the same file, and Git tracks changes in this repository.
 
-The paths above match my current setup. The [official Codex documentation](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills) currently lists `~/.agents/skills` as the user skills location and confirms support for symlinked skill folders. Use the directory your Codex installation reads when setting up another machine.
+The labels above represent your checkout and the skills directory used by your Codex installation. See the [official Codex documentation](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills) for supported skill locations and symlink behavior.
 
 ## Why link individual skills?
 
@@ -35,16 +35,14 @@ Linking the entire directory would make newly added skills available without cre
 
 ## Set up a machine
 
-1. Clone this repository, for example into `~/Devel/skills`.
-2. Create the local skills directory if it does not exist.
-3. Add a symlink for each skill you want to use.
-
-For example, once `baby-mode` exists in the repository:
+Clone the repository wherever you keep your projects:
 
 ```sh
-mkdir -p "$HOME/.codex/skills"
-ln -s "$HOME/Devel/skills/baby-mode" "$HOME/.codex/skills/baby-mode"
+git clone https://github.com/AcrylicShrimp/skills.git
+cd skills
 ```
+
+Identify the skills directory used by your Codex installation and create it if needed. Add a symlink there for each skill you want to use, pointing to that skill's directory in this checkout. You can also ask your coding agent to perform this setup using the prompts below.
 
 If the destination already contains a skill directory, compare it with the repository version and preserve any local changes before replacing it with a link. Do not overwrite it blindly.
 
