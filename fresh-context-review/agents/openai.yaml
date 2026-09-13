@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fresh Context Review"
+  short_description: "Independent review loop with fresh context"
+  default_prompt: "Use $fresh-context-review to get an independent fresh-context review before finalizing this change."

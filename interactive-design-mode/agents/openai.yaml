@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interactive Design Mode"
+  short_description: "Architecture-first design discussion mode"
+  default_prompt: "Use $interactive-design-mode to draft, challenge, and solidify the core architecture before implementation."

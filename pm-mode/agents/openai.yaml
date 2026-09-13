@@ -1,0 +1,4 @@
+interface:
+  display_name: "PM Mode"
+  short_description: "Delegate work across Codex threads"
+  default_prompt: "Use $pm-mode to split this project work into coordinated Codex threads."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create TODO"
+  short_description: "Create blocked near-term action TODO items"
+  default_prompt: "Use $create-todo to create a blocked near-term action item in repository-root/docs/todos with status, criteria, and an activity log."

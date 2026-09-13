@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement Plan"
+  short_description: "Execute a reviewed plan and record verified results"
+  default_prompt: "Use $implement-plan to execute or resume the selected reviewed plan, verify its outcome, and update its status and execution results."

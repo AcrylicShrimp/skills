@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update TODO"
+  short_description: "Update TODO status and activity logs safely"
+  default_prompt: "Use $update-todo to locate the active todo item, sync newly generated plans into Detailed Plan when empty, update status/log entries, and handle scope changes by dropping and creating a new todo."

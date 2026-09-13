@@ -1,0 +1,4 @@
+interface:
+  display_name: "Baby Mode"
+  short_description: "Explain any concept or proof very simply and accurately"
+  default_prompt: "Use $baby-mode to explain this idea or proof in the simplest accurate terms."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Plan"
+  short_description: "Write one-step plans with pseudo code and fresh review"
+  default_prompt: "Use $create-plan to write one plan file per implementation step, include human-reviewable pseudo code, and obtain a fresh-context agent review."
